@@ -1,48 +1,56 @@
-<div *ngIf="product">
+
+
+  <div *ngIf="product">
     <h2>{{product.productName}}</h2>
     <div>
-        <label>Prodcut ID: </label>{{product.id}}
+      <label>Prodcut ID: </label>{{product.id}}
     </div>
     <div>
-        <label>Name: </label>
-        <input [(ngModel)]="product.productName" placeholder="productName"/>
+      <label>Name: </label>
+      <input [(ngModel)]="product.productName" placeholder="Product Name" />
     </div>
     <div>
-        <label>Code: </label>
-        <input [(ngModel)]="product.productCode" placeholder="productCode"/>
+      <label>Code: </label>
+      <input [(ngModel)]="product.productCode" placeholder="Product Code" />
     </div>
-     <div>
-        <label>Description: </label>
-        <!-- <input [(ngModel)]="product.description" placeholder="description"/> -->
+    <div>
+      <label>Description: </label>
+      <!-- <input [(ngModel)]="product.description" placeholder="description"/> -->
       <textarea class="form-control"
-        rows="3"
-        [(ngModel)]="product.description">
+                rows="3"
+                [(ngModel)]="product.description">
       </textarea>
-       
+     
+    </div>
+    <div>
+      <label>Quantity: </label>
+      <input [(ngModel)]="product.quantity" placeholder="quantity" />
+    </div>
+    <div>
+      <label>Price: </label>
+      <input [(ngModel)]="product.price" placeholder="price" />
+    </div>
+
+    <div class="form-group row mb-2">
+      <div class="offset-md-2 col-md-4">
+        <button class="btn btn-primary mr-3"
+                style="width:80px;"
+                type="submit"
+                (click)="save()">
+          Save
+        </button>
+        <button class="btn btn-outline-secondary mr-3"
+                style="width:80px;"
+                type="button"
+                title="Cancel your edits"
+                (click)="goBack()">
+          Cancel
+        </button>
+      </div>
     </div>
 
 
-      <div class="form-group row mb-2">
-        <div class="offset-md-2 col-md-4">
-          <button class="btn btn-primary mr-3"
-                  style="width:80px;"
-                  type="submit"
-                  (click)="save()">
-            Save
-          </button>
-          <button class="btn btn-outline-secondary mr-3"
-                  style="width:80px;"
-                  type="button"
-                  title="Cancel your edits"
-                  [routerLink]="['/products']">
-            Cancel
-          </button>
-        </div>
-      </div>
+
+  </div>
 
 
-
-</div>
-
-
- 

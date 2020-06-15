@@ -5,6 +5,8 @@ import 'rxjs/add/operator/toPromise';
 
 import { Product } from '../model/product';
 
+
+
 @Injectable()
 export class ProductService {
 
@@ -38,20 +40,22 @@ export class ProductService {
         .catch(this.handleError);
   }
 
-  create(name: string): Promise<Product> {
+
+   create(product: Product): Promise<Product> {
+    product.id = null;
     return this.http
-        .post(this.productsUrl, JSON.stringify({ name: name }), { headers: this.headers })
+      .post(this.productsUrl, JSON.stringify(product), { headers: this.headers })
         .toPromise()
-        .then(res => res.json().data as Product)
+        .then(() => product)
         .catch(this.handleError);
   }
 
-  update(hero: Product): Promise<Product> {
-    const url = `${this.productsUrl}/${hero.id}`;
+  update(product: Product): Promise<Product> {
+    const url = `${this.productsUrl}/${product.id}`;
     return this.http
-        .put(url, JSON.stringify(hero), { headers: this.headers })
+      .put(url, JSON.stringify(product), { headers: this.headers })
         .toPromise()
-        .then(() => hero)
+      .then(() => product)
         .catch(this.handleError);
   }
 
