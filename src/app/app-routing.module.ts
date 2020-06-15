@@ -1,11 +1,26 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProductListComponent } from './product/product-list.component';
+import { ProductDetailComponent } from './product/product-detail.component';
+import { ProductEditComponent } from './product/product-edit.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'products', component: ProductListComponent },
+  { path: 'product/:id', component: ProductDetailComponent },
+  { path: 'product/:id/edit', component: ProductEditComponent }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
