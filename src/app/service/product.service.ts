@@ -12,7 +12,7 @@ export class ProductService {
 
   private headers = new Headers({ 'Content-Type': 'application/json' });
   private productsUrl = 'api/products';  // URL to web api
-
+  
   constructor(private http: Http) {
   }
 
