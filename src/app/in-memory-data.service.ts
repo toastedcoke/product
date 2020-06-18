@@ -5,48 +5,48 @@ export class InMemoryDataService implements InMemoryDbService {
     const products = [
       {
         'id': 1,
-        'productName': 'Leaf Rake',
+        'productName': 'Shampoo',
         'productCode': 'GDN-0011',
-        'description': 'Leaf rake with 48-inch wooden handle',
+        'description': 'Shampoo for anti hair fall',
         'price': 19.95,
         'quantity': 122,
-        'imageUrl': 'https://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png'
+        'imageUrl': 'https://openclipart.org/image/2000px/svg_to_png/304246/1531809666.png'
       },
       {
         'id': 2,
-        'productName': 'Garden Cart',
+        'productName': 'Hand Wash Soap',
         'productCode': 'GDN-0023',
-        'description': '15 gallon capacity rolling garden cart',
+        'description': 'Anti-bacterial hand wash soap with moisturizer',
         'price': 32.99,
         'quantity': 1000,
-        'imageUrl': 'https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png'
+        'imageUrl': 'https://openclipart.org/image/2000px/svg_to_png/27202/laobc-Liquid-soap.png'
       },
       {
         'id': 5,
-        'productName': 'Hammer',
+        'productName': 'Desk Fan',
         'productCode': 'TBX-0048',
-        'description': 'Curved claw steel hammer',
+        'description': 'Desk Fan - 15 inches with 3 speed',
         'price': 8.9,
         'quantity': 230,
-        'imageUrl': 'https://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png'
+        'imageUrl': 'https://openclipart.org/image/2000px/svg_to_png/315908/1551276237.png'
       },
       {
         'id': 8,
-        'productName': 'Saw',
+        'productName': 'Hair Dryer',
         'productCode': 'TBX-0022',
-        'description': '15-inch steel blade hand saw',
+        'description': 'Three button speed with hot or cool fan',
         'price': 11.55,
         'quantity': 60,
-        'imageUrl': 'https://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png'
+        'imageUrl': 'https://openclipart.org/image/800px/svg_to_png/284901/publicdomainq-hair_dryer.png'
       },
       {
         'id': 10,
-        'productName': 'Video Game Controller',
+        'productName': 'Electric Toothbrush',
         'productCode': 'GMG-0042',
-        'description': 'Standard two-button video game controller',
+        'description': 'Battery operated electric toothbrush',
         'price': 35.95,
         'quantity': 90,
-        'imageUrl': 'https://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png'
+        'imageUrl': 'https://openclipart.org/image/800px/svg_to_png/305049/1534127836.png'
       }
     ];
     return { products };

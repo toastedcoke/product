@@ -8,7 +8,8 @@ import { ProductService } from '../service/product.service';
 import { FormBuilder, FormGroup, FormControl, FormArray, Validators, FormControlName } from '@angular/forms';
 
 @Component({
-  templateUrl: './product-edit.component.html'
+  templateUrl: './product-edit.component.html',
+  styleUrls: ['./product-edit.component.css']
 })
 
 export class ProductEditComponent implements OnInit {
